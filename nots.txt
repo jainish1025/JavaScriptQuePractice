@@ -62,3 +62,16 @@ code: function getter(inpt, get = 1) {
 }
 
 console.log(getter([1, 2, 3, 4, 5, 6]));
+
+
+// Que4 Write a simple JavaScript program to join all elements of the following array into a string.
+// Example:
+// array: mycolor = ["Red", "Green", "Blue", "Yellow"];
+// Output: "Red, Green, Blue, Yellow"
+
+// The `joiner` function takes an input array and join its elements into a string with a comma as the delimiter.
+
+function joiner(input) {
+  return input.join(", ");
+}
+console.log(joiner(["Red", "Green", "Blue", "Yellow"]));

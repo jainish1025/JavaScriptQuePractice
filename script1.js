@@ -26,12 +26,19 @@
 
 // Que3 Write a javascript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' element of the array.
 
-function getter(inpt, get = 1) {
-  var clone = [];
-  for (var i = 0; i < get; i++) {
-    clone.push(inpt[i]);
-}
-  return clone;
-}
+// function getter(inpt, get = 1) {
+//   var clone = [];
+//   for (var i = 0; i < get; i++) {
+//     clone.push(inpt[i]);
+// }
+//   return clone;
+// }
 
-console.log(getter([1, 2, 3, 4, 5, 6]));
+// console.log(getter([1, 2, 3, 4, 5, 6]));
+
+// Que4 Write a simple JavaScript program to join all elements of the following array into a string.
+
+function joiner(inpt) {
+  return inpt.join(",");
+}
+console.log(joiner(["Red", "Green", "Blue", "Yellow"]));
