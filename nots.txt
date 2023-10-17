@@ -25,3 +25,17 @@
     return inp instanceof Array;
   }
   console.log(checkArr([1,2,3,4]));
+
+
+//Q2: Write a javscript function to clone an array.
+=> To clone an array we used spread operator to clone the array.
+  let arr = [1,2,3,4];
+  let new_arr = [...arr]
+  //This way you can copy all elements of one array into another array and that's why its called cloning.
+
+  > function cloning(inpt){
+    let newarr = [...inpt];
+    return newarr;
+}
+
+console.log(cloning([1,2,3,4]));

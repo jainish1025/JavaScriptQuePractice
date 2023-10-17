@@ -12,3 +12,14 @@
 //     return inp instanceof Array;
 //   }
 //   console.log(checkArr([1,2,3,4]));
+
+
+//Q2: Write a javscript function to clone an array.
+
+function cloning(inpt){
+
+    let newarr = [...inpt];
+    return newarr;
+}
+
+console.log(cloning([1,2,3,4]));
