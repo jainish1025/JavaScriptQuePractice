@@ -13,13 +13,25 @@
 //   }
 //   console.log(checkArr([1,2,3,4]));
 
-
 //Q2: Write a javscript function to clone an array.
 
-function cloning(inpt){
+// function cloning(inpt){
 
-    let newarr = [...inpt];
-    return newarr;
+//     let newarr = [...inpt];
+//     return newarr;
+// }
+
+// console.log(cloning([1,2,3,4]));
+// console.log(cloning([1,2,[3,4]]));
+
+// Que3 Write a javascript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' element of the array.
+
+function getter(inpt, get = 1) {
+  var clone = [];
+  for (var i = 0; i < get; i++) {
+    clone.push(inpt[i]);
+}
+  return clone;
 }
 
-console.log(cloning([1,2,3,4]));
+console.log(getter([1, 2, 3, 4, 5, 6]));

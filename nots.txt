@@ -1,41 +1,64 @@
-//Q1: Write a javascript functin to check whether an 'input' is an array or not
-  -> Hear are two ways to check this.
+// Q1: Write a JavaScript function to check whether an 'input' is an array or not.
+// There are two ways to check this.
 
-  1) > function checkArr(inpt){
-    Array.isArray(inpt);
-    }
+// 1. Using Array.isArray() method
+function checkArr(input) {
+    return Array.isArray(input);
+}
+ // This is how the perticular input is array or not.
 
-    = This is how the perticular input is array or not.
-    => We will do return
+console.log(checkArr(1));    // false
+console.log(checkArr({}));   // false
+console.log(checkArr([1]));  // true
 
-    > function checkArr(inpt){
-        return Array.isArray(inpt);
-    }
-    console.log(checkArr(1)); false
-    console.log(checkArr({})); false
-    console.log(checkArr([1])); True
+// 2. Using instanceof operator
+function checkArr(input) {
+    return input instanceof Array;
+}
 
- 2)
+console.log(checkArr([1, 2, 3, 4]));
+
  => Whenever we create an array it is always given a blueprint or an instance which is array,
  when we create an array some how it linkdown to capital a [Array].
  -> [] instanceof Array
   ans = true;
 
-  > function checkArr(inp){
-    return inp instanceof Array;
-  }
-  console.log(checkArr([1,2,3,4]));
 
 
-//Q2: Write a javscript function to clone an array.
-=> To clone an array we used spread operator to clone the array.
-  let arr = [1,2,3,4];
-  let new_arr = [...arr]
-  //This way you can copy all elements of one array into another array and that's why its called cloning.
+// Q2: Write a JavaScript function to clone an array.
+// To clone an array, we can use the spread operator.
+// This way you can copy all elements of one array into another array.
+//Example:
+let arr = [1,2,3,4];
+let new_arr = [...arr]
 
-  > function cloning(inpt){
-    let newarr = [...inpt];
-    return newarr;
+function cloning(input) {
+    let newArray = [...input];
+    return newArray;
 }
 
-console.log(cloning([1,2,3,4]));
+console.log(cloning([1, 2, 3, 4]));
+
+
+
+// Q3: Write a JavaScript function to get the first element of an array.
+// Passing a parameter 'n' will return the first 'n' elements of the array.
+
+// Example 1: Return the first element
+// getFirst([1, 2, 3, 4, 5]) should return [1]
+
+// Example 2: Return the first 3 elements
+// getFirst([1, 2, 3, 4, 5], 3) should return [1, 2, 3]
+
+// If you set the default get value to 1, and you have an input array [1, 2, 3, 4, 5], the loop will run 1 time and
+we set the "get" value to 3, and you have the same input ( array [1, 2, 3, 4, 5], get = 3), the loop will run 3 times.
+
+code: function getter(inpt, get = 1) {
+  var clone = [];
+  for (var i = 0; i < get; i++) {
+    clone.push(inpt[i]);
+}
+  return clone;
+}
+
+console.log(getter([1, 2, 3, 4, 5, 6]));
