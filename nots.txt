@@ -1,0 +1,27 @@
+//Q1: Write a javascript functin to check whether an 'input' is an array or not
+  -> Hear are two ways to check this.
+
+  1) > function checkArr(inpt){
+    Array.isArray(inpt);
+    }
+
+    = This is how the perticular input is array or not.
+    => We will do return
+
+    > function checkArr(inpt){
+        return Array.isArray(inpt);
+    }
+    console.log(checkArr(1)); false
+    console.log(checkArr({})); false
+    console.log(checkArr([1])); True
+
+ 2)
+ => Whenever we create an array it is always given a blueprint or an instance which is array,
+ when we create an array some how it linkdown to capital a [Array].
+ -> [] instanceof Array
+  ans = true;
+
+  > function checkArr(inp){
+    return inp instanceof Array;
+  }
+  console.log(checkArr([1,2,3,4]));
